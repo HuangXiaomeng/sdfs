@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+	<property>
+		<name>namenode.akka.path</name>
+		<value>akka.tcp://namenode@192.168.11.190:10000</value>
+	</property>
+
+</configuration>

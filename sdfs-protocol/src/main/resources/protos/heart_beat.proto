@@ -1,0 +1,11 @@
+option java_package = "org.armon.sdfs.protocol";
+option java_outer_classname = "HeartBeatProtos";
+
+message HeartBeatRequest {
+    required int32 available_disk = 1;
+}
+
+message HeartBeatResponse {
+    required bool success = 1;
+    optional string message = 2 [default = ""];
+}

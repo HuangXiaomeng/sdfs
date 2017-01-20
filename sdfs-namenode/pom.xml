@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.armon.sdfs</groupId>
+		<artifactId>sdfs-parent</artifactId>
+		<version>0.0.1-snapshot</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<groupId>org.armon.sdfs</groupId>
+	<artifactId>sdfs-namenode</artifactId>
+	<version>0.0.1-snapshot</version>
+	<name>sdfs-namenode</name>
+	<url>http://maven.apache.org</url>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<sdfs.version>0.0.1-snapshot</sdfs.version>
+		<redis.version>2.9.0</redis.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.armon.sdfs</groupId>
+			<artifactId>sdfs-common</artifactId>
+			<version>${sdfs.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.armon.sdfs</groupId>
+			<artifactId>sdfs-protocol</artifactId>
+			<version>${sdfs.version}</version>
+		</dependency>
+		<dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${redis.version}</version>
+       </dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.2</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
