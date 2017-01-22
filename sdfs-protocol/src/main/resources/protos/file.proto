@@ -1,0 +1,61 @@
+option java_package = "org.armon.sdfs.protocol";
+option java_outer_classname = "FileProtos";
+
+message DataNodeEntry {
+	required string ip = 1;
+	required int32 port = 2;
+}
+
+
+// namenode find datanode by filename
+message File2DataNodeRequest {
+    required string file_name = 1;
+}
+
+message File2DataNodeResponse {
+    required bool success = 1;
+    optional DataNodeEntry node_entry = 2;
+    optional string message = 3 [default = ""];
+}
+
+
+// read file
+message ReadFileRequest {
+	required string file_name = 1;
+    optional int64 offset = 2 [default = 0];
+    optional int32 size = 3 [default = 10000];
+}
+
+message ReadFileResponse {
+	required bool success = 1;
+    optional bytes content = 2;
+    optional bool is_end = 3;
+    optional int64 offset = 4;
+    optional string message = 5 [default = ""];
+}
+
+
+// write file
+message WriteFileRequest {
+    required string file_name= 1;
+    required bytes content = 2;
+    required bool is_end = 3;
+}
+
+message WriteFileResponse {
+    required bool success = 1;
+    optional string message = 2 [default = ""];
+}
+
+
+// tail file
+message TailFileRequest {
+    required string file_name = 1;
+    optional int32 size = 2 [default = 100000];
+}
+
+message TailFileResponse {
+	required bool success = 1;
+    optional bytes content = 2;
+    optional string message = 3 [default = ""];
+}

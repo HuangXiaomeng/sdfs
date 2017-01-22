@@ -7,10 +7,14 @@ package org.armon.sdfs.datanode;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
+import org.apache.hadoop.conf.Configuration;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.armon.sdfs.common.ConfigUtils;
 import org.armon.sdfs.common.SdfsConstants;
+import org.armon.sdfs.common.util.ConfigUtils;
+import org.armon.sdfs.datanode.actor.FileRoutingActor;
+import org.armon.sdfs.datanode.util.DiskUtil;
+import org.armon.sdfs.datanode.util.FutureUtils;
 import org.armon.sdfs.protocol.HeartBeatProtos.HeartBeatRequest;
 import org.armon.sdfs.protocol.HeartBeatProtos.HeartBeatResponse;
 
@@ -45,13 +49,16 @@ public class DataNode {
 	}
 
 	private static void initActors(ActorSystem actorSystem) {
-		String heartbeatAkkaPath = ConfigUtils.getConfig().get(DataNodeConstants.NAMENODE_AKKA_PATH) + "/user/"
+		Configuration conf = ConfigUtils.getConfig();
+
+		// start heart beat
+		String heartbeatAkkaPath = conf.get(DataNodeConstants.NAMENODE_AKKA_PATH) + "/user/"
 				+ SdfsConstants.NAMENODE_AKKA_HEARTBEAT_NAME;
 		ActorSelection hearbeatActor = actorSystem.actorSelection(heartbeatAkkaPath);
 		actorSystem.scheduler().schedule(Duration.Zero(), Duration.create(5, TimeUnit.SECONDS), new Runnable() {
 			@Override
 			public void run() {
-				HeartBeatRequest request = HeartBeatRequest.newBuilder().setAvailableDisk(100).build();
+				HeartBeatRequest request = HeartBeatRequest.newBuilder().setAvailableDisk(DiskUtil.getAvailableDisk()).build();
 				try {
 					HeartBeatResponse response = (HeartBeatResponse) FutureUtils.awaitResult(hearbeatActor, request,
 							30);
@@ -67,5 +74,10 @@ public class DataNode {
 				}
 			}
 		}, actorSystem.dispatcher());
+
+		// start file actors
+		int writeActorNum = conf.getInt(DataNodeConstants.DATANODE_WRITEACTOR_NUM, 20);
+		actorSystem.actorOf(FileRoutingActor.props(writeActorNum), SdfsConstants.DATANODE_AKKA_SYSTEM_NAME);
+
 	}
 }

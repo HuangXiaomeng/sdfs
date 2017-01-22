@@ -2,7 +2,7 @@
  * Author: HuangXiaomeng
  * Mail: xiaom@apache.org
  */
-package org.armon.sdfs.datanode;
+package org.armon.sdfs.datanode.util;
 
 import java.util.concurrent.TimeUnit;
 

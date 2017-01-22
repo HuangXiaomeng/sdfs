@@ -6,8 +6,8 @@ package org.armon.sdfs.namenode;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.armon.sdfs.common.ConfigUtils;
 import org.armon.sdfs.common.SdfsConstants;
+import org.armon.sdfs.common.util.ConfigUtils;
 import org.armon.sdfs.namenode.actor.FileActor;
 import org.armon.sdfs.namenode.actor.HeartBeatActor;
 
@@ -42,8 +42,9 @@ public class NameNode {
 	}
 
 	private static void initActors(ActorSystem actorSystem) {
-		actorSystem.actorOf(HeartBeatActor.props(), SdfsConstants.NAMENODE_AKKA_HEARTBEAT_NAME);
-		int fileActorNum = ConfigUtils.getConfig().getInt(NameConstants.FILE_ACTOR_NUM, 50);
+		int heartbeatActorNum = ConfigUtils.getConfig().getInt(NameConstants.NAMENODE_HEARTBEAT_ACTOR_NUM, 10);
+		actorSystem.actorOf(HeartBeatActor.props().withRouter(new RoundRobinPool(heartbeatActorNum)), SdfsConstants.NAMENODE_AKKA_HEARTBEAT_NAME);
+		int fileActorNum = ConfigUtils.getConfig().getInt(NameConstants.NAMENODE_FILE_ACTOR_NUM, 10);
 		actorSystem.actorOf(FileActor.props().withRouter(new RoundRobinPool(fileActorNum)),
 				SdfsConstants.NAMENODE_AKKA_FILE_NAME);
 	}

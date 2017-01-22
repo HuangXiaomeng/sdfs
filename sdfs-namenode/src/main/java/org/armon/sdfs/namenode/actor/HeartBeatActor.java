@@ -35,6 +35,8 @@ public class HeartBeatActor extends UntypedActor {
 			nodeManager.update(new DataNodeKey(ip, port), new DataNodeInfo(request.getAvailableDisk()));
 			HeartBeatResponse response = HeartBeatResponse.newBuilder().setSuccess(true).build();
 			getSender().tell(response, getSelf());
+		} else {
+			unhandled(obj);
 		}
 	}
 

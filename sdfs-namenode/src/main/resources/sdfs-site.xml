@@ -2,8 +2,13 @@
 <configuration>
 
 	<property>
-		<name>namenode.akka.path</name>
-		<value>akka.tcp://namenode@192.168.11.190:10000</value>
+		<name>namenode.heartbeat.actor.num</name>
+		<value>10</value>
+	</property>
+	
+	<property>
+		<name>namenode.file.actor.num</name>
+		<value>10</value>
 	</property>
 
 </configuration>

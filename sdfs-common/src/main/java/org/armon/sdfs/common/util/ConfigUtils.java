@@ -2,7 +2,7 @@
  * Author: HuangXiaomeng
  * Mail: xiaom@apache.org
  */
-package org.armon.sdfs.common;
+package org.armon.sdfs.common.util;
 
 import java.net.SocketException;
 import java.net.UnknownHostException;

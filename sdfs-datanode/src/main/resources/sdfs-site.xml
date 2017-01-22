@@ -5,5 +5,25 @@
 		<name>namenode.akka.path</name>
 		<value>akka.tcp://namenode@192.168.11.190:10000</value>
 	</property>
+	
+	<property>
+		<name>datanode.writeactor.num</name>
+		<value>20</value>
+	</property>
+	
+	<property>
+		<name>datanode.file.path</name>
+		<value>/tmp/sdfs</value>
+	</property>
+	
+	<property>
+		<name>datanode.file.read.max.size</name>
+		<value>1048576</value>
+	</property>
+	
+	<property>
+		<name>namenode.akka.path</name>
+		<value>akka.tcp://namenode@192.168.11.190:10000</value>
+	</property>
 
 </configuration>
