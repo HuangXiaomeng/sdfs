@@ -11,12 +11,6 @@ import org.armon.sdfs.common.DataNodeKey;
 import org.armon.sdfs.namenode.NodeManager;
 
 public class RandomSelector implements NodeSelector {
-	private static RandomSelector instance = new RandomSelector();
-    private RandomSelector() {}
-    public static RandomSelector getInstance() {
-        return instance;
-    }
-
 	private NodeManager nodeManager = NodeManager.INSTANCE;
 
 	@Override

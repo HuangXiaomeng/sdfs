@@ -10,5 +10,10 @@
 		<name>namenode.file.actor.num</name>
 		<value>10</value>
 	</property>
+	
+	<property>
+		<name>namenode.redis.hosts</name>
+		<value>10.11.6.129:7700,10.11.6.129:7701,10.11.6.129:7702</value>
+	</property>
 
 </configuration>

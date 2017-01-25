@@ -39,29 +39,28 @@ public class FileRoutingActor extends UntypedActor {
         return Props.create(FileRoutingActor.class, size);
     }
 
-	@Override
-	public void onReceive(Object obj) throws Exception {
-		if (obj instanceof ReadFileRequest) {
-			readFile((ReadFileRequest) obj);
-		} else if (obj instanceof WriteFileRequest) {
-			writeFile((WriteFileRequest) obj);
-		} else if (obj instanceof TailFileRequest) {
-			tailFile((TailFileRequest) obj);
-		} else {
-			unhandled(obj);
-		}
-	}
+    @Override
+    public void onReceive(Object obj) throws Exception {
+        if (obj instanceof ReadFileRequest) {
+            readFile((ReadFileRequest) obj);
+        } else if (obj instanceof WriteFileRequest) {
+            writeFile((WriteFileRequest) obj);
+        } else if (obj instanceof TailFileRequest) {
+            tailFile((TailFileRequest) obj);
+        } else {
+            unhandled(obj);
+        }
+    }
 
-	private void writeFile(WriteFileRequest request) {
+    private void writeFile(WriteFileRequest request) {
         try {
             String filename = request.getFileName();
             int hashcode = filename.hashCode();
-            writerActors.get((hashcode == Integer.MIN_VALUE ? 0 : Math.abs(hashcode)) % size).forward(request, getContext());
+            writerActors.get((hashcode == Integer.MIN_VALUE ? 0 : Math.abs(hashcode)) % size).forward(request,
+                    getContext());
         } catch (Exception e) {
-        	WriteFileResponse response = WriteFileResponse.newBuilder()
-        			.setSuccess(false)
-                    .setMessage(ExceptionUtil.getErrMsg(e))
-                    .build();
+            WriteFileResponse response = WriteFileResponse.newBuilder().setSuccess(false)
+                    .setMessage(ExceptionUtil.getErrMsg(e)).build();
             getSender().tell(response, getSelf());
             LOGGER.error(e);
             throw e;
@@ -74,10 +73,8 @@ public class FileRoutingActor extends UntypedActor {
             ref.forward(request, getContext());
             ref.forward(PoisonPill.getInstance(), getContext());
         } catch (Exception e) {
-        	ReadFileResponse response = ReadFileResponse.newBuilder()
-        			.setSuccess(false)
-                    .setMessage(ExceptionUtil.getErrMsg(e))
-                    .build();
+            ReadFileResponse response = ReadFileResponse.newBuilder().setSuccess(false)
+                    .setMessage(ExceptionUtil.getErrMsg(e)).build();
             getSender().tell(response, getSelf());
             LOGGER.error(e);
             throw e;
@@ -90,10 +87,8 @@ public class FileRoutingActor extends UntypedActor {
             ref.forward(request, getContext());
             ref.forward(PoisonPill.getInstance(), getContext());
         } catch (Exception e) {
-        	TailFileResponse response = TailFileResponse.newBuilder()
-        			.setSuccess(false)
-                    .setMessage(ExceptionUtil.getErrMsg(e))
-                    .build();
+            TailFileResponse response = TailFileResponse.newBuilder().setSuccess(false)
+                    .setMessage(ExceptionUtil.getErrMsg(e)).build();
             getSender().tell(response, getSelf());
             LOGGER.error(e);
             throw e;

@@ -576,7 +576,7 @@ public final class FileProtos {
     // @@protoc_insertion_point(class_scope:DataNodeEntry)
   }
 
-  public interface File2DataNodeRequestOrBuilder
+  public interface FindDataNodeForWriteRequestOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
     // required string file_name = 1;
@@ -595,28 +595,24 @@ public final class FileProtos {
         getFileNameBytes();
   }
   /**
-   * Protobuf type {@code File2DataNodeRequest}
-   *
-   * <pre>
-   * namenode find datanode by filename
-   * </pre>
+   * Protobuf type {@code FindDataNodeForWriteRequest}
    */
-  public static final class File2DataNodeRequest extends
+  public static final class FindDataNodeForWriteRequest extends
       com.google.protobuf.GeneratedMessage
-      implements File2DataNodeRequestOrBuilder {
-    // Use File2DataNodeRequest.newBuilder() to construct.
-    private File2DataNodeRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      implements FindDataNodeForWriteRequestOrBuilder {
+    // Use FindDataNodeForWriteRequest.newBuilder() to construct.
+    private FindDataNodeForWriteRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private File2DataNodeRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private FindDataNodeForWriteRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final File2DataNodeRequest defaultInstance;
-    public static File2DataNodeRequest getDefaultInstance() {
+    private static final FindDataNodeForWriteRequest defaultInstance;
+    public static FindDataNodeForWriteRequest getDefaultInstance() {
       return defaultInstance;
     }
 
-    public File2DataNodeRequest getDefaultInstanceForType() {
+    public FindDataNodeForWriteRequest getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -626,7 +622,7 @@ public final class FileProtos {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private File2DataNodeRequest(
+    private FindDataNodeForWriteRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -668,28 +664,28 @@ public final class FileProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.armon.sdfs.protocol.FileProtos.internal_static_File2DataNodeRequest_descriptor;
+      return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeForWriteRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.armon.sdfs.protocol.FileProtos.internal_static_File2DataNodeRequest_fieldAccessorTable
+      return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeForWriteRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest.class, org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest.Builder.class);
+              org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest.class, org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<File2DataNodeRequest> PARSER =
-        new com.google.protobuf.AbstractParser<File2DataNodeRequest>() {
-      public File2DataNodeRequest parsePartialFrom(
+    public static com.google.protobuf.Parser<FindDataNodeForWriteRequest> PARSER =
+        new com.google.protobuf.AbstractParser<FindDataNodeForWriteRequest>() {
+      public FindDataNodeForWriteRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new File2DataNodeRequest(input, extensionRegistry);
+        return new FindDataNodeForWriteRequest(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<File2DataNodeRequest> getParserForType() {
+    public com.google.protobuf.Parser<FindDataNodeForWriteRequest> getParserForType() {
       return PARSER;
     }
 
@@ -784,53 +780,53 @@ public final class FileProtos {
       return super.writeReplace();
     }
 
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest parseFrom(
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest parseFrom(
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest parseFrom(byte[] data)
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest parseFrom(
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest parseFrom(java.io.InputStream input)
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest parseFrom(
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest parseDelimitedFrom(java.io.InputStream input)
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest parseDelimitedFrom(
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest parseFrom(
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest parseFrom(
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -839,7 +835,7 @@ public final class FileProtos {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest prototype) {
+    public static Builder newBuilder(org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -851,28 +847,24 @@ public final class FileProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code File2DataNodeRequest}
-     *
-     * <pre>
-     * namenode find datanode by filename
-     * </pre>
+     * Protobuf type {@code FindDataNodeForWriteRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.armon.sdfs.protocol.FileProtos.File2DataNodeRequestOrBuilder {
+       implements org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.armon.sdfs.protocol.FileProtos.internal_static_File2DataNodeRequest_descriptor;
+        return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeForWriteRequest_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.armon.sdfs.protocol.FileProtos.internal_static_File2DataNodeRequest_fieldAccessorTable
+        return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeForWriteRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest.class, org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest.Builder.class);
+                org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest.class, org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest.Builder.class);
       }
 
-      // Construct using org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest.newBuilder()
+      // Construct using org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -903,23 +895,23 @@ public final class FileProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.armon.sdfs.protocol.FileProtos.internal_static_File2DataNodeRequest_descriptor;
+        return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeForWriteRequest_descriptor;
       }
 
-      public org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest getDefaultInstanceForType() {
-        return org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest.getDefaultInstance();
+      public org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest getDefaultInstanceForType() {
+        return org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest.getDefaultInstance();
       }
 
-      public org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest build() {
-        org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest result = buildPartial();
+      public org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest build() {
+        org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest buildPartial() {
-        org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest result = new org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest(this);
+      public org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest buildPartial() {
+        org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest result = new org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -932,16 +924,16 @@ public final class FileProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest) {
-          return mergeFrom((org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest)other);
+        if (other instanceof org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest) {
+          return mergeFrom((org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest other) {
-        if (other == org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest other) {
+        if (other == org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest.getDefaultInstance()) return this;
         if (other.hasFileName()) {
           bitField0_ |= 0x00000001;
           fileName_ = other.fileName_;
@@ -963,11 +955,11 @@ public final class FileProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest parsedMessage = null;
+        org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.armon.sdfs.protocol.FileProtos.File2DataNodeRequest) e.getUnfinishedMessage();
+          parsedMessage = (org.armon.sdfs.protocol.FileProtos.FindDataNodeForWriteRequest) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1052,18 +1044,497 @@ public final class FileProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:File2DataNodeRequest)
+      // @@protoc_insertion_point(builder_scope:FindDataNodeForWriteRequest)
     }
 
     static {
-      defaultInstance = new File2DataNodeRequest(true);
+      defaultInstance = new FindDataNodeForWriteRequest(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:File2DataNodeRequest)
+    // @@protoc_insertion_point(class_scope:FindDataNodeForWriteRequest)
   }
 
-  public interface File2DataNodeResponseOrBuilder
+  public interface FindDataNodeForReadRequestOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required string file_name = 1;
+    /**
+     * <code>required string file_name = 1;</code>
+     */
+    boolean hasFileName();
+    /**
+     * <code>required string file_name = 1;</code>
+     */
+    java.lang.String getFileName();
+    /**
+     * <code>required string file_name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getFileNameBytes();
+  }
+  /**
+   * Protobuf type {@code FindDataNodeForReadRequest}
+   */
+  public static final class FindDataNodeForReadRequest extends
+      com.google.protobuf.GeneratedMessage
+      implements FindDataNodeForReadRequestOrBuilder {
+    // Use FindDataNodeForReadRequest.newBuilder() to construct.
+    private FindDataNodeForReadRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private FindDataNodeForReadRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final FindDataNodeForReadRequest defaultInstance;
+    public static FindDataNodeForReadRequest getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public FindDataNodeForReadRequest getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FindDataNodeForReadRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              fileName_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeForReadRequest_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeForReadRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest.class, org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<FindDataNodeForReadRequest> PARSER =
+        new com.google.protobuf.AbstractParser<FindDataNodeForReadRequest>() {
+      public FindDataNodeForReadRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FindDataNodeForReadRequest(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FindDataNodeForReadRequest> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required string file_name = 1;
+    public static final int FILE_NAME_FIELD_NUMBER = 1;
+    private java.lang.Object fileName_;
+    /**
+     * <code>required string file_name = 1;</code>
+     */
+    public boolean hasFileName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string file_name = 1;</code>
+     */
+    public java.lang.String getFileName() {
+      java.lang.Object ref = fileName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          fileName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string file_name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFileNameBytes() {
+      java.lang.Object ref = fileName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fileName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      fileName_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasFileName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getFileNameBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getFileNameBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code FindDataNodeForReadRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeForReadRequest_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeForReadRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest.class, org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest.Builder.class);
+      }
+
+      // Construct using org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        fileName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeForReadRequest_descriptor;
+      }
+
+      public org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest getDefaultInstanceForType() {
+        return org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest.getDefaultInstance();
+      }
+
+      public org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest build() {
+        org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest buildPartial() {
+        org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest result = new org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.fileName_ = fileName_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest) {
+          return mergeFrom((org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest other) {
+        if (other == org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest.getDefaultInstance()) return this;
+        if (other.hasFileName()) {
+          bitField0_ |= 0x00000001;
+          fileName_ = other.fileName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasFileName()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.armon.sdfs.protocol.FileProtos.FindDataNodeForReadRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required string file_name = 1;
+      private java.lang.Object fileName_ = "";
+      /**
+       * <code>required string file_name = 1;</code>
+       */
+      public boolean hasFileName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string file_name = 1;</code>
+       */
+      public java.lang.String getFileName() {
+        java.lang.Object ref = fileName_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          fileName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string file_name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFileNameBytes() {
+        java.lang.Object ref = fileName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fileName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string file_name = 1;</code>
+       */
+      public Builder setFileName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        fileName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string file_name = 1;</code>
+       */
+      public Builder clearFileName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        fileName_ = getDefaultInstance().getFileName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string file_name = 1;</code>
+       */
+      public Builder setFileNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        fileName_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:FindDataNodeForReadRequest)
+    }
+
+    static {
+      defaultInstance = new FindDataNodeForReadRequest(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:FindDataNodeForReadRequest)
+  }
+
+  public interface FindDataNodeResponseOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
     // required bool success = 1;
@@ -1106,24 +1577,24 @@ public final class FileProtos {
         getMessageBytes();
   }
   /**
-   * Protobuf type {@code File2DataNodeResponse}
+   * Protobuf type {@code FindDataNodeResponse}
    */
-  public static final class File2DataNodeResponse extends
+  public static final class FindDataNodeResponse extends
       com.google.protobuf.GeneratedMessage
-      implements File2DataNodeResponseOrBuilder {
-    // Use File2DataNodeResponse.newBuilder() to construct.
-    private File2DataNodeResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      implements FindDataNodeResponseOrBuilder {
+    // Use FindDataNodeResponse.newBuilder() to construct.
+    private FindDataNodeResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private File2DataNodeResponse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private FindDataNodeResponse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final File2DataNodeResponse defaultInstance;
-    public static File2DataNodeResponse getDefaultInstance() {
+    private static final FindDataNodeResponse defaultInstance;
+    public static FindDataNodeResponse getDefaultInstance() {
       return defaultInstance;
     }
 
-    public File2DataNodeResponse getDefaultInstanceForType() {
+    public FindDataNodeResponse getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -1133,7 +1604,7 @@ public final class FileProtos {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private File2DataNodeResponse(
+    private FindDataNodeResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1193,28 +1664,28 @@ public final class FileProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.armon.sdfs.protocol.FileProtos.internal_static_File2DataNodeResponse_descriptor;
+      return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeResponse_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.armon.sdfs.protocol.FileProtos.internal_static_File2DataNodeResponse_fieldAccessorTable
+      return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse.class, org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse.Builder.class);
+              org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse.class, org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<File2DataNodeResponse> PARSER =
-        new com.google.protobuf.AbstractParser<File2DataNodeResponse>() {
-      public File2DataNodeResponse parsePartialFrom(
+    public static com.google.protobuf.Parser<FindDataNodeResponse> PARSER =
+        new com.google.protobuf.AbstractParser<FindDataNodeResponse>() {
+      public FindDataNodeResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new File2DataNodeResponse(input, extensionRegistry);
+        return new FindDataNodeResponse(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<File2DataNodeResponse> getParserForType() {
+    public com.google.protobuf.Parser<FindDataNodeResponse> getParserForType() {
       return PARSER;
     }
 
@@ -1369,53 +1840,53 @@ public final class FileProtos {
       return super.writeReplace();
     }
 
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse parseFrom(
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse parseFrom(
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse parseFrom(byte[] data)
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse parseFrom(
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse parseFrom(java.io.InputStream input)
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse parseFrom(
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse parseDelimitedFrom(java.io.InputStream input)
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse parseDelimitedFrom(
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse parseFrom(
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse parseFrom(
+    public static org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1424,7 +1895,7 @@ public final class FileProtos {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse prototype) {
+    public static Builder newBuilder(org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -1436,24 +1907,24 @@ public final class FileProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code File2DataNodeResponse}
+     * Protobuf type {@code FindDataNodeResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.armon.sdfs.protocol.FileProtos.File2DataNodeResponseOrBuilder {
+       implements org.armon.sdfs.protocol.FileProtos.FindDataNodeResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.armon.sdfs.protocol.FileProtos.internal_static_File2DataNodeResponse_descriptor;
+        return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeResponse_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.armon.sdfs.protocol.FileProtos.internal_static_File2DataNodeResponse_fieldAccessorTable
+        return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse.class, org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse.Builder.class);
+                org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse.class, org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse.Builder.class);
       }
 
-      // Construct using org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse.newBuilder()
+      // Construct using org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1493,23 +1964,23 @@ public final class FileProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.armon.sdfs.protocol.FileProtos.internal_static_File2DataNodeResponse_descriptor;
+        return org.armon.sdfs.protocol.FileProtos.internal_static_FindDataNodeResponse_descriptor;
       }
 
-      public org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse getDefaultInstanceForType() {
-        return org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse.getDefaultInstance();
+      public org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse getDefaultInstanceForType() {
+        return org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse.getDefaultInstance();
       }
 
-      public org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse build() {
-        org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse result = buildPartial();
+      public org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse build() {
+        org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse buildPartial() {
-        org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse result = new org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse(this);
+      public org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse buildPartial() {
+        org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse result = new org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1534,16 +2005,16 @@ public final class FileProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse) {
-          return mergeFrom((org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse)other);
+        if (other instanceof org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse) {
+          return mergeFrom((org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse other) {
-        if (other == org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse other) {
+        if (other == org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse.getDefaultInstance()) return this;
         if (other.hasSuccess()) {
           setSuccess(other.getSuccess());
         }
@@ -1577,11 +2048,11 @@ public final class FileProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse parsedMessage = null;
+        org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.armon.sdfs.protocol.FileProtos.File2DataNodeResponse) e.getUnfinishedMessage();
+          parsedMessage = (org.armon.sdfs.protocol.FileProtos.FindDataNodeResponse) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1816,15 +2287,15 @@ public final class FileProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:File2DataNodeResponse)
+      // @@protoc_insertion_point(builder_scope:FindDataNodeResponse)
     }
 
     static {
-      defaultInstance = new File2DataNodeResponse(true);
+      defaultInstance = new FindDataNodeResponse(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:File2DataNodeResponse)
+    // @@protoc_insertion_point(class_scope:FindDataNodeResponse)
   }
 
   public interface ReadFileRequestOrBuilder
@@ -5728,15 +6199,20 @@ public final class FileProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_DataNodeEntry_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_File2DataNodeRequest_descriptor;
+    internal_static_FindDataNodeForWriteRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_File2DataNodeRequest_fieldAccessorTable;
+      internal_static_FindDataNodeForWriteRequest_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_File2DataNodeResponse_descriptor;
+    internal_static_FindDataNodeForReadRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_File2DataNodeResponse_fieldAccessorTable;
+      internal_static_FindDataNodeForReadRequest_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_FindDataNodeResponse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_FindDataNodeResponse_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_ReadFileRequest_descriptor;
   private static
@@ -5777,22 +6253,24 @@ public final class FileProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\nfile.proto\")\n\rDataNodeEntry\022\n\n\002ip\030\001 \002(" +
-      "\t\022\014\n\004port\030\002 \002(\005\")\n\024File2DataNodeRequest\022" +
-      "\021\n\tfile_name\030\001 \002(\t\"_\n\025File2DataNodeRespo" +
-      "nse\022\017\n\007success\030\001 \002(\010\022\"\n\nnode_entry\030\002 \001(\013" +
-      "2\016.DataNodeEntry\022\021\n\007message\030\003 \001(\t:\000\"L\n\017R" +
-      "eadFileRequest\022\021\n\tfile_name\030\001 \002(\t\022\021\n\006off" +
-      "set\030\002 \001(\003:\0010\022\023\n\004size\030\003 \001(\005:\00510000\"g\n\020Rea" +
-      "dFileResponse\022\017\n\007success\030\001 \002(\010\022\017\n\007conten" +
-      "t\030\002 \001(\014\022\016\n\006is_end\030\003 \001(\010\022\016\n\006offset\030\004 \001(\003\022" +
-      "\021\n\007message\030\005 \001(\t:\000\"F\n\020WriteFileRequest\022\021",
-      "\n\tfile_name\030\001 \002(\t\022\017\n\007content\030\002 \002(\014\022\016\n\006is" +
-      "_end\030\003 \002(\010\"7\n\021WriteFileResponse\022\017\n\007succe" +
-      "ss\030\001 \002(\010\022\021\n\007message\030\002 \001(\t:\000\":\n\017TailFileR" +
-      "equest\022\021\n\tfile_name\030\001 \002(\t\022\024\n\004size\030\002 \001(\005:" +
-      "\006100000\"G\n\020TailFileResponse\022\017\n\007success\030\001" +
-      " \002(\010\022\017\n\007content\030\002 \001(\014\022\021\n\007message\030\003 \001(\t:\000" +
-      "B%\n\027org.armon.sdfs.protocolB\nFileProtos"
+      "\t\022\014\n\004port\030\002 \002(\005\"0\n\033FindDataNodeForWriteR" +
+      "equest\022\021\n\tfile_name\030\001 \002(\t\"/\n\032FindDataNod" +
+      "eForReadRequest\022\021\n\tfile_name\030\001 \002(\t\"^\n\024Fi" +
+      "ndDataNodeResponse\022\017\n\007success\030\001 \002(\010\022\"\n\nn" +
+      "ode_entry\030\002 \001(\0132\016.DataNodeEntry\022\021\n\007messa" +
+      "ge\030\003 \001(\t:\000\"L\n\017ReadFileRequest\022\021\n\tfile_na" +
+      "me\030\001 \002(\t\022\021\n\006offset\030\002 \001(\003:\0010\022\023\n\004size\030\003 \001(" +
+      "\005:\00510000\"g\n\020ReadFileResponse\022\017\n\007success\030" +
+      "\001 \002(\010\022\017\n\007content\030\002 \001(\014\022\016\n\006is_end\030\003 \001(\010\022\016",
+      "\n\006offset\030\004 \001(\003\022\021\n\007message\030\005 \001(\t:\000\"F\n\020Wri" +
+      "teFileRequest\022\021\n\tfile_name\030\001 \002(\t\022\017\n\007cont" +
+      "ent\030\002 \002(\014\022\016\n\006is_end\030\003 \002(\010\"7\n\021WriteFileRe" +
+      "sponse\022\017\n\007success\030\001 \002(\010\022\021\n\007message\030\002 \001(\t" +
+      ":\000\":\n\017TailFileRequest\022\021\n\tfile_name\030\001 \002(\t" +
+      "\022\024\n\004size\030\002 \001(\005:\006100000\"G\n\020TailFileRespon" +
+      "se\022\017\n\007success\030\001 \002(\010\022\017\n\007content\030\002 \001(\014\022\021\n\007" +
+      "message\030\003 \001(\t:\000B%\n\027org.armon.sdfs.protoc" +
+      "olB\nFileProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -5805,50 +6283,56 @@ public final class FileProtos {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_DataNodeEntry_descriptor,
               new java.lang.String[] { "Ip", "Port", });
-          internal_static_File2DataNodeRequest_descriptor =
+          internal_static_FindDataNodeForWriteRequest_descriptor =
             getDescriptor().getMessageTypes().get(1);
-          internal_static_File2DataNodeRequest_fieldAccessorTable = new
+          internal_static_FindDataNodeForWriteRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_File2DataNodeRequest_descriptor,
+              internal_static_FindDataNodeForWriteRequest_descriptor,
               new java.lang.String[] { "FileName", });
-          internal_static_File2DataNodeResponse_descriptor =
+          internal_static_FindDataNodeForReadRequest_descriptor =
             getDescriptor().getMessageTypes().get(2);
-          internal_static_File2DataNodeResponse_fieldAccessorTable = new
+          internal_static_FindDataNodeForReadRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_File2DataNodeResponse_descriptor,
+              internal_static_FindDataNodeForReadRequest_descriptor,
+              new java.lang.String[] { "FileName", });
+          internal_static_FindDataNodeResponse_descriptor =
+            getDescriptor().getMessageTypes().get(3);
+          internal_static_FindDataNodeResponse_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_FindDataNodeResponse_descriptor,
               new java.lang.String[] { "Success", "NodeEntry", "Message", });
           internal_static_ReadFileRequest_descriptor =
-            getDescriptor().getMessageTypes().get(3);
+            getDescriptor().getMessageTypes().get(4);
           internal_static_ReadFileRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_ReadFileRequest_descriptor,
               new java.lang.String[] { "FileName", "Offset", "Size", });
           internal_static_ReadFileResponse_descriptor =
-            getDescriptor().getMessageTypes().get(4);
+            getDescriptor().getMessageTypes().get(5);
           internal_static_ReadFileResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_ReadFileResponse_descriptor,
               new java.lang.String[] { "Success", "Content", "IsEnd", "Offset", "Message", });
           internal_static_WriteFileRequest_descriptor =
-            getDescriptor().getMessageTypes().get(5);
+            getDescriptor().getMessageTypes().get(6);
           internal_static_WriteFileRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_WriteFileRequest_descriptor,
               new java.lang.String[] { "FileName", "Content", "IsEnd", });
           internal_static_WriteFileResponse_descriptor =
-            getDescriptor().getMessageTypes().get(6);
+            getDescriptor().getMessageTypes().get(7);
           internal_static_WriteFileResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_WriteFileResponse_descriptor,
               new java.lang.String[] { "Success", "Message", });
           internal_static_TailFileRequest_descriptor =
-            getDescriptor().getMessageTypes().get(7);
+            getDescriptor().getMessageTypes().get(8);
           internal_static_TailFileRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_TailFileRequest_descriptor,
               new java.lang.String[] { "FileName", "Size", });
           internal_static_TailFileResponse_descriptor =
-            getDescriptor().getMessageTypes().get(8);
+            getDescriptor().getMessageTypes().get(9);
           internal_static_TailFileResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_TailFileResponse_descriptor,

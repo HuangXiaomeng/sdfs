@@ -7,12 +7,15 @@ message DataNodeEntry {
 }
 
 
-// namenode find datanode by filename
-message File2DataNodeRequest {
+message FindDataNodeForWriteRequest {
     required string file_name = 1;
 }
 
-message File2DataNodeResponse {
+message FindDataNodeForReadRequest {
+    required string file_name = 1;
+}
+
+message FindDataNodeResponse {
     required bool success = 1;
     optional DataNodeEntry node_entry = 2;
     optional string message = 3 [default = ""];

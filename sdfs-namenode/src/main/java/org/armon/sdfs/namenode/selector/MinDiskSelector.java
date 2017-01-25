@@ -12,11 +12,6 @@ import org.armon.sdfs.common.DataNodeKey;
 import org.armon.sdfs.namenode.NodeManager;
 
 public class MinDiskSelector implements NodeSelector {
-	private static MinDiskSelector instance = new MinDiskSelector();
-    private MinDiskSelector() {}
-    public static MinDiskSelector getInstance() {
-        return instance;
-    }
 
 	private NodeManager nodeManager = NodeManager.INSTANCE;
 

@@ -14,4 +14,6 @@ public interface DataNodeConstants {
 	String DATANODE_FILE_READ_MAX_SIZE = "datanode.file.read.max.size";
 
 	char END_OF_LOG = '\004';   //LOG结束符
+
+	String DATANODE_FILE_REPLICATES = "datanode.file.replicates";
 }

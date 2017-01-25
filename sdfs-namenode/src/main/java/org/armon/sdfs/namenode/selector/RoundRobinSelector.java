@@ -11,17 +11,11 @@ import org.armon.sdfs.namenode.NodeManager;
 
 
 public class RoundRobinSelector implements NodeSelector {
-	private static RoundRobinSelector instance = new RoundRobinSelector();
-    private RoundRobinSelector() {}
-    public static RoundRobinSelector getInstance() {
-        return instance;
-    }
-
 	private NodeManager nodeManager = NodeManager.INSTANCE;
-	private int index = 0;
+	private static int index = 0;
 
 	@Override
-	public synchronized DataNodeKey select() {
+    public synchronized DataNodeKey select() {
 		List<DataNodeKey> nodeKeys = nodeManager.getOnlineNodes();
 		int size = nodeKeys.size();
 		if (size == 0) {
