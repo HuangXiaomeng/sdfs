@@ -18,7 +18,7 @@ public class MinDiskSelector implements NodeSelector {
 	@Override
 	public DataNodeKey select() {
 		Map<DataNodeKey, DataNodeInfo> onlineNodesInfo = nodeManager.getOnlineNodesInfo();
-		int maxAvailableDisk = 0;
+		long maxAvailableDisk = 0;
 		DataNodeKey select = null;
 		for (Entry<DataNodeKey, DataNodeInfo> entry : onlineNodesInfo.entrySet()) {
 			if (entry.getValue().getAvailable_disk() > maxAvailableDisk) {

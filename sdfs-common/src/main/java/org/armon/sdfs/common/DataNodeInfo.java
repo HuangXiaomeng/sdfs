@@ -6,18 +6,18 @@ package org.armon.sdfs.common;
 
 public class DataNodeInfo {
 
-	private int available_disk;
+	private long available_disk;
 	private DataNodeStatus status;
 
-	public DataNodeInfo(int disk) {
+	public DataNodeInfo(long disk) {
 		this.available_disk = disk;
 	}
 
-	public int getAvailable_disk() {
+	public long getAvailable_disk() {
 		return available_disk;
 	}
 
-	public void setAvailable_disk(int available_disk) {
+	public void setAvailable_disk(long available_disk) {
 		this.available_disk = available_disk;
 	}
 

@@ -11,15 +11,15 @@ public final class HeartBeatProtos {
   public interface HeartBeatRequestOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required int32 available_disk = 1;
+    // required int64 available_disk = 1;
     /**
-     * <code>required int32 available_disk = 1;</code>
+     * <code>required int64 available_disk = 1;</code>
      */
     boolean hasAvailableDisk();
     /**
-     * <code>required int32 available_disk = 1;</code>
+     * <code>required int64 available_disk = 1;</code>
      */
-    int getAvailableDisk();
+    long getAvailableDisk();
   }
   /**
    * Protobuf type {@code HeartBeatRequest}
@@ -74,7 +74,7 @@ public final class HeartBeatProtos {
             }
             case 8: {
               bitField0_ |= 0x00000001;
-              availableDisk_ = input.readInt32();
+              availableDisk_ = input.readInt64();
               break;
             }
           }
@@ -117,24 +117,24 @@ public final class HeartBeatProtos {
     }
 
     private int bitField0_;
-    // required int32 available_disk = 1;
+    // required int64 available_disk = 1;
     public static final int AVAILABLE_DISK_FIELD_NUMBER = 1;
-    private int availableDisk_;
+    private long availableDisk_;
     /**
-     * <code>required int32 available_disk = 1;</code>
+     * <code>required int64 available_disk = 1;</code>
      */
     public boolean hasAvailableDisk() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 available_disk = 1;</code>
+     * <code>required int64 available_disk = 1;</code>
      */
-    public int getAvailableDisk() {
+    public long getAvailableDisk() {
       return availableDisk_;
     }
 
     private void initFields() {
-      availableDisk_ = 0;
+      availableDisk_ = 0L;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -153,7 +153,7 @@ public final class HeartBeatProtos {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, availableDisk_);
+        output.writeInt64(1, availableDisk_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -166,7 +166,7 @@ public final class HeartBeatProtos {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, availableDisk_);
+          .computeInt64Size(1, availableDisk_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -284,7 +284,7 @@ public final class HeartBeatProtos {
 
       public Builder clear() {
         super.clear();
-        availableDisk_ = 0;
+        availableDisk_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
@@ -368,35 +368,35 @@ public final class HeartBeatProtos {
       }
       private int bitField0_;
 
-      // required int32 available_disk = 1;
-      private int availableDisk_ ;
+      // required int64 available_disk = 1;
+      private long availableDisk_ ;
       /**
-       * <code>required int32 available_disk = 1;</code>
+       * <code>required int64 available_disk = 1;</code>
        */
       public boolean hasAvailableDisk() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 available_disk = 1;</code>
+       * <code>required int64 available_disk = 1;</code>
        */
-      public int getAvailableDisk() {
+      public long getAvailableDisk() {
         return availableDisk_;
       }
       /**
-       * <code>required int32 available_disk = 1;</code>
+       * <code>required int64 available_disk = 1;</code>
        */
-      public Builder setAvailableDisk(int value) {
+      public Builder setAvailableDisk(long value) {
         bitField0_ |= 0x00000001;
         availableDisk_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 available_disk = 1;</code>
+       * <code>required int64 available_disk = 1;</code>
        */
       public Builder clearAvailableDisk() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        availableDisk_ = 0;
+        availableDisk_ = 0L;
         onChanged();
         return this;
       }
@@ -992,7 +992,7 @@ public final class HeartBeatProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\020heart_beat.proto\"*\n\020HeartBeatRequest\022\026" +
-      "\n\016available_disk\030\001 \002(\005\"7\n\021HeartBeatRespo" +
+      "\n\016available_disk\030\001 \002(\003\"7\n\021HeartBeatRespo" +
       "nse\022\017\n\007success\030\001 \002(\010\022\021\n\007message\030\002 \001(\t:\000B" +
       "*\n\027org.armon.sdfs.protocolB\017HeartBeatPro" +
       "tos"
